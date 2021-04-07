@@ -1,0 +1,49 @@
+// c program to design and implememt an atm system
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int language, transaction, amount, deposit;
+    printf("please insert your card!\n");
+    printf("please choose a language to proceed in,type 1 for english or 2 for kiswahili:\n");
+    scanf("%d",&language);
+    if(language=1)
+    {
+        printf("you can now proceed in english!\n");
+        language++;
+    }
+      else
+        printf("Sorry, Your option is currently unavailable!\n");
+    printf("please select your transaction (1)cash_withdrawal  \t (3)check_balance \n (2)cash_deposit \t  (4)other_options \n");
+    scanf("%d",&transaction);
+           if(transaction=1)
+           {
+               printf("please type in the amount using your keyboard!");
+               scanf("%d",amount);
+               if(amount<10000)
+               {
+               printf("withdrawal successful");
+               }
+               else
+               {
+                   printf("Your account balance is insufficient");
+               }
+           }
+           else if(transaction=2)
+           {
+               printf("Please enter your deposit value");
+               scanf("%d",&deposit);
+               printf("Thankyou kindly refresh the machine and check your balance!");
+           }
+           else if(transaction=3)
+           {
+               printf("Your account_balance is shs10,000.Thankyou");
+
+           }
+            else if(transaction=4)
+           {
+               printf("Kindly contact the management incase of any issues!Thankyou");
+           }
+           printf("Thankyou for banking with us!You can re-enter your card and choose another option.");
+           return 0;
+}
